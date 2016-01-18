@@ -93,14 +93,14 @@ public:
 
 	node* push_front(const TYPE& item)
 	{
-		node* item = new node(item);
+		node* item1 = new node(item);
 
 		if(start != nullptr)
-			item->nxt = start;
+			item1->nxt = start;
 
-		start = item;
+		start = item1;
 
-		return item;
+		return item1;
 	}
 
 	bool pop_back(TYPE& data)
@@ -196,7 +196,7 @@ public:
 		{
 			node* prev = prev_node(item);
 
-			node<TYPE>* new_item = new node<TYPE>(data);
+			node* new_item = new node(data);
 			new_item->nxt = item;
 
 			if(prev != nullptr)

@@ -46,6 +46,10 @@ int main()
 		container.push_back(2);
 		container.push_back(3);
 		TEST("Push Back", container.size() == 3);
+		container.push_front(100);
+		container.push_front(200);
+		container.push_front(300);
+		TEST("Push Front", container.size() == 6);
 		TEST("Front", *(container.front()) == 1);
 		TEST("Back", *(container.back()) == 3);
 		TEST("Empty", container.empty() == false);
@@ -159,6 +163,8 @@ int main()
 		TEST("Operator = c string", str2 == "bye world");
 		str2 += " test";
 		TEST("Operator += c string", str2 == "bye world test");
+
+
 	}
 
 	// Point -------------------

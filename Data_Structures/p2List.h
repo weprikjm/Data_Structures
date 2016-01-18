@@ -105,17 +105,17 @@ public:
 
 	node* push_front(const TYPE& item)
 	{
-		node* item = new node(item);
+		node* item1 = new node(item);
 
 		if(start != nullptr)
 		{
-			item->nxt = start;
-			start->prv = item;
+			item1->nxt = start;
+			start->prv = item1;
 		}
 		
-		start = item;
+		start = item1;
 
-		return item;
+		return item1;
 	}
 
 	bool pop_back(TYPE& data)
